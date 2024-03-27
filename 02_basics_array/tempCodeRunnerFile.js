@@ -1,1 +1,3 @@
-myArr1.push(10)
+console.log(person.email)
+// console.log(person["email"])
+// console.log(person["full name"])
