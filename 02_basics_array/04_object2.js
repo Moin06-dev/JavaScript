@@ -61,3 +61,4 @@ console.log(Object.keys(fbuser));
 console.log(Object.values(fbuser));
 console.log(Object.entries(fbuser));
 
+console.log(Object.hasOwnProperty("email"));
