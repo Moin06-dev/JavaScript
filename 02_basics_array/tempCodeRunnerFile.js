@@ -1,3 +1,2 @@
-console.log(person.email)
-// console.log(person["email"])
-// console.log(person["full name"])
+const {country:nk , name : mk} = praobject
+// console.log(`${mk} or ${nk}`)
