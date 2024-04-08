@@ -22,8 +22,9 @@ basicfun();
     console.log(`please enter username:${username}`);
 })("Moin Khan");
 
-// more example
 
+
+// more example
 const experiment= ( (num1 ,num2)=>{
 console.log(num1 + num2)
 })(10 , 10);
