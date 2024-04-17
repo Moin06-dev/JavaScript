@@ -30,19 +30,37 @@ for (let moin = 0; moin <= 26 ; moin++) {
 // but if we want tostopt the code on number 6 so we can use break like switch 
 for (let index = 0; index < 10; index++) {
     if (index == 6 ) {
-     console.log("im on 6 number buddy so im break now")
+    //  console.log("im on 6 number buddy so im break now")
 break;
     }
-     console.log(`the number is:${index}`)
+    //  console.log(`the number is:${index}`)
      
  }
 
 //  if we want to run the code but not stop like break so we ca use continue
 for (let index = 0; index < 10; index++) {
     if (index == 6 ) {
-     console.log("im on 6 number buddy so im let go, continue now")
+    //  console.log("im on 6 number buddy so im let go, continue now")
 continue;
     }
-     console.log(`the number is:${index}`)
+    //  console.log(`the number is:${index}`)
      
  }
+
+
+ //lets make 2 ka table with for loop
+const number = 2;
+for (let two = 1; two <= 20 ; two++) {
+   console.log(`${number} * ${two} = ${number*two} `);
+    
+}
+
+
+
+const number1 = 12
+for (let index = 1; index <= 10; index++) {
+    console.log(`${number1} * ${index} = ${number1*index}`);
+    if (index == 5 ) {
+        break;
+    }
+}
