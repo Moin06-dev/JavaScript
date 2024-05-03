@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom mauplation</title>
+</head>
+<body style="background-color: black; color: rgb(198, 227, 227);">
+
+    
+</body>
+<script>
+    const div = document.createElement("div")
+   div.className = "main"
+   div.id = "id"
+   console.log(div)
+   div.setAttribute("title", "here is title")
+   const addtextcontent = document.createTextNode('idhar div ke andar jo content hai wo idhar likha hu')
+   div.appendChild(addtextcontent)
+   document.body.append(div)
+   div.style.color = "white"
+
+
+   const mydiv = document.createElement('div');
+   mydiv.className = "main"
+   mydiv.id = 'myId'
+   console.log(mydiv);
+const newcontent = document.createTextNode("here is the andar ka content")
+mydiv.appendChild(newcontent)
+document.body.appendChild(mydiv)
+
+
+</script>
+</html>

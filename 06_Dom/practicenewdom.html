@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testingDom</title>
+</head>
+<body style="background-color: black; color: antiquewhite;">
+   <ul id="languages" class="newlanguages">
+    <li>javaScript</li>
+    <li>python</li>
+    <li>mongoDb</li>
+    <li>mojo</li>
+   </ul>
+</body>
+<script>
+function newcontent(newlang) {
+    const li = document.createElement('li');
+    li.innerHTML = newlang;
+    document.querySelector('#languages').appendChild(li);
+}
+newcontent('java');
+
+//edit this dom
+const editli = document.querySelector("li:last-child")
+editli.innerHTML = "new content edit wala "
+editli.textContent = 'by text ontent'
+
+const li = document.querySelector("li:first-child");
+const newText = document.createTextNode("new content using appendChild");
+li.appendChild(newText);
+
+// remove something
+
+const remli = document.querySelector('li:nth-child(2)')
+remli.remove()//removing python...
+</script>
+</html>

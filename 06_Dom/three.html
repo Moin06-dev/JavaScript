@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit/Remove or selecting Dom</title>
+</head>
+<body style="background-color: black ; color: whitesmoke">
+    <ul class="language" id="new">
+        <li>
+            JavaScript
+        </li>
+    </ul>
+    
+</body>
+<script>
+    function addlang(newlang) {
+        const li = document.createElement('li')
+        li.innerText = newlang;
+        document.querySelector('#new').appendChild(li);
+    }
+
+    addlang('typescript')
+
+    // new add text
+    function newaddlang(newtext) {
+    const li = document.createElement('li');
+    li.textContent = newtext;
+    document.querySelector('.language').appendChild(li);
+}
+
+newaddlang("python");
+newaddlang("mongoDB");
+
+
+//edit dom
+// Selecting the first <li> element in the document
+const editdom = document.querySelector("li:first-child");
+
+// Setting the innerHTML of the selected <li> element to the new language
+editdom.innerHTML = "mojo";
+
+
+const newedit = document.querySelector("li:nth-child(3)");
+
+// Setting the innerHTML of the selected <li> element to the new language
+newedit.innerHTML = "trying new thing";
+
+
+// remove thing from dom
+function name(removing) {
+    const removethis = document.querySelector("li:first-child");
+    removethis.remove()
+}
+name();
+
+
+</script>
+</html>
