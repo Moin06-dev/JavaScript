@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Example</title>
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .popup-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 30%;
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .cta-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Pop-up Container -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h3>Pop-up Title</h3>
+            <p>Pop-up content goes here...</p>
+            <button class="cta-btn">Call to Action</button>
+        </div>
+    </div>
+
+    <script>
+        // Get the pop-up container and close button elements
+        const popup = document.getElementById('popup');
+        const closeBtn = document.getElementsByClassName('close-btn')[0];
+
+        // Show the pop-up
+        function showPopup() {
+            popup.style.display = 'block';
+        }
+
+        // Hide the pop-up
+        function hidePopup() {
+            popup.style.display = 'none';
+        }
+
+        // Close the pop-up when the close button is clicked
+        closeBtn.onclick = function() {
+            hidePopup();
+        }
+
+        // Close the pop-up when the user clicks outside of the pop-up content
+        window.onclick = function(event) {
+            if (event.target == popup) {
+                hidePopup();
+            }
+        }
+
+        // Trigger the pop-up to show based on your desired conditions
+        // For example, show the pop-up after a certain time delay
+        setTimeout(showPopup, 5000); // Show the pop-up after 5 seconds
+    </script>
+</body>
+</html>
